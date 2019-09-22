@@ -1,0 +1,27 @@
+
+
+<br>
+<button [routerLink]="['']">Search Again</button>
+<br>
+<table border="1">
+  <thead> Movie Details </thead>
+  <tr>
+    <th>Moview Name</th>
+    <th>Year</th>
+    <th>imdbid</th>
+    <th>type</th>
+    <th>Poster URL</th>
+  </tr>
+  <tbody>
+    <tr *ngIf="!movies || movies.length == 0">
+        <p>No Movies Found!</p>
+    </tr>
+    <tr *ngFor="let movieinfo of movies">
+      <td> {{movieinfo.Title}}</td>
+      <td> {{movieinfo.Year}}</td>
+      <td> {{movieinfo.imdbID}} </td>
+      <td> {{movieinfo.Type}} </td>
+      <td> {{movieinfo.Poster}}</td>
+    </tr>
+  </tbody>
+</table>
